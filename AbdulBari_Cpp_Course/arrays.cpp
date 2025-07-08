@@ -1,6 +1,18 @@
 #include <iostream>
 
-int main() {
-    std::cout << "C++ setup is working!" << std::endl;
+using namespace std;
+
+int main() 
+{
+
+    int size;
+    cout<< "Enter Array Size";
+    cin >> size; 
+
+    cout<<size;
+    int arr[size];
+
+
     return 0;
 }
+
