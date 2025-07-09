@@ -6,11 +6,17 @@ int main()
 {
 
     int size;
-    cout<< "Enter Array Size";
+    cout<< "Enter Array Size: ";
     cin >> size; 
 
-    cout<<size;
     int arr[size];
+
+    arr[0] = 2;
+
+    for(int x : arr)
+    {
+        cout << x << endl;
+    }
 
 
     return 0;
