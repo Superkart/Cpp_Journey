@@ -29,9 +29,26 @@ int PowerOfNumberOpt(int n, int p)
     }
 }
 
+int PowerOfNumberItterative(int n, int p)
+{
+    int power = 1;
+    if(p == 0)
+    {
+        return 1;
+    }
+    else
+    {
+        for(int i=1; i<=p; i++)
+        {
+            power = power * n;
+        }
+    return power;
+    }
+}
 int main()
 {
     cout<<PowerOfNumber(4,2)<<endl;
     cout<<PowerOfNumberOpt(4,2)<<endl;
+    cout<<PowerOfNumberItterative(5,2)<<endl;
     return 0;
 }
