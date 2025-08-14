@@ -21,9 +21,24 @@ double TaylorSeries(int x, int n)
     }
 }
 
+double TaylorSeriesOptimizedRecursion(int x, int n)
+{
+    static double result = 1;
+
+    if(n == 0)
+    {
+        return result;
+    }
+    else
+    {
+        result = 1+ x * result/n;
+        return TaylorSeriesOptimizedRecursion(x, n-1);
+    }
+}
 
 int main()
 {
+    cout<<TaylorSeriesOptimizedRecursion(2,3)<<endl;
     cout<<TaylorSeries(2, 3)<<endl;
     return 0;
 } 
