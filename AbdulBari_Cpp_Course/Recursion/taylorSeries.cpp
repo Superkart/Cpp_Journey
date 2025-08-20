@@ -36,9 +36,27 @@ double TaylorSeriesOptimizedRecursion(int x, int n)
     }
 }
 
+double TaylorSeriesOptimizedItterative(int x, int n)
+{
+    double sum = 1;
+    int i;
+    double power = 1;
+    double factorial = 1;
+
+    for(i=1; i<=n; i++)
+    {
+        power = power * x;
+        factorial = factorial * i;
+        sum = sum + power/factorial;
+    }
+
+    return sum;
+}
+
 int main()
 {
     cout<<TaylorSeriesOptimizedRecursion(2,3)<<endl;
     cout<<TaylorSeries(2, 3)<<endl;
+    cout<<TaylorSeriesOptimizedItterative(2,3)<<endl;
     return 0;
 } 
