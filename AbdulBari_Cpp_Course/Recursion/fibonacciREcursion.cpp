@@ -50,7 +50,8 @@ int FibonacciMemoization(int n)
         {
             F[n-1] = FibonacciMemoization(n-1);
         }
-        return F[n-2] + F[n-1];
+        F[n] = F[n-2] + F[n-1];
+        return F[n];
     }
 
    
