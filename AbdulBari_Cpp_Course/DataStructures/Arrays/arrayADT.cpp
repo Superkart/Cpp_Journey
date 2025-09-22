@@ -30,7 +30,7 @@ void DisplayArray(const Array &arr)
     cout<<"The Array elements are: "<<endl;
     for(int i = 0; i<arr.length; i++)
     {
-        cout<<arr.A[i];
+        cout<<arr.A[i]<< " ";
     }
         cout<<endl;
 }
@@ -61,6 +61,23 @@ void Insert(int value, int index, Array &arr)
     arr.A[index] = value;
     arr.length++;
 }
+int Delete(int index, Array &arr)
+{
+    int x = 0;
+    if(index >= 0 && index < arr.length)
+    {
+        x = arr.A[index];
+        for(int i=index; i< arr.length-1; i++)
+        {
+            arr.A[i] = arr.A[i+1];
+        }
+        arr.length--;
+        return x;
+        
+    }
+    return 0;
+
+}
 
 int main()
 {
@@ -72,14 +89,14 @@ int main()
 
     arr.A = new int[arr.size]; 
     arr.length = 0;
+    cout << "Enter number of elements you want to enter: ";
+    cin >> n;
 
-    cout<<"Enter Number of elements you want to enter"<<endl;
-    cin>>n;
-    arr.length = n;
-    
     EnterArrayElements(n,arr);
     //Append(100, arr);
-    Insert(15, 0, arr);
+    Insert(15, 3, arr);
+    DisplayArray(arr);
+    cout<<Delete(2, arr)<<endl;
     DisplayArray(arr);
 
     delete[] arr.A;
