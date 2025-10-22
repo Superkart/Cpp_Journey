@@ -1,14 +1,8 @@
 #include <iostream>
+#include "arrayADT.h"
 
 using namespace std;
 
-
-struct Array
-{
-    int* A;
-    int size;
-    int length;
-};
 
 void EnterArrayElements(int n, Array &arr)
 {
