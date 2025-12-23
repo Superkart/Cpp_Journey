@@ -17,6 +17,14 @@ void RemoveSetElement(set<int> &s, int value)
     }
 }
 
+void StringToSet(const string &str, set<char> &s)
+{
+    for(auto ch : str)
+    {
+        s.insert(ch);
+    }
+}
+
 int main()
 {
 
@@ -39,8 +47,17 @@ int main()
         cout << ch << endl;
     }
 
+    StringToSet("Karthik", charSet);
+    for(auto it: charSet)
+    {
+        cout << it;
+    }
+    cout<<endl;
 
     return 0;
 
 }
+
+
+
 
