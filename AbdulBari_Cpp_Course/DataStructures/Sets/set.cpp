@@ -31,6 +31,13 @@ int main()
         cout << i << endl;
     }
 
+    set<char> charSet;
+    charSet.insert('Z');    
+    charSet.insert('Y');
+    for(auto ch : charSet)
+    {
+        cout << ch << endl;
+    }
 
 
     return 0;
